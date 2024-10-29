@@ -14,12 +14,12 @@
         <div id="popup">
             <div class="popup-content">
                 <div class="container d-flex flex-column space-y-2">
-                    <input class="form-control" type="text" placeholder="Titre">
-                    <textarea class="form-control" rows="3"></textarea>
-                    <input class="form-control" type="text" placeholder="Priorité">
-                    <input class="form-control" type="text" placeholder="Date">
+                    <input class="form-control" id="titre" type="text" placeholder="Titre">
+                    <textarea class="form-control" id="description" placeholder="Description" rows="3"></textarea>
+                    <input class="form-control" id="priorite" type="text" placeholder="Priorité">
+                    <input class="form-control" id="date" type="text" placeholder="Date">
                     <div class="d-flex justify-content-around">
-                        <button class="btn btn-primary"><span class="h3">Valid</span></button>
+                        <button id="valid" class="btn btn-primary"><span class="h3">Valid</span></button>
                         <button id="cancel" class="btn btn-primary"><span class="h3">Cancel</span></button>
                     </div>
                 </div>
@@ -57,11 +57,11 @@
                     <!-- PlaceHolder -->
                     <div id="Todo" class="Todo-tasks">
                         <!-- Task Box style Example -->
-                        <div class="border p-3">
+                        <!--<div class="border p-3">
                             <p class="h4">Task Titre</p>
                             <button class="btn btn-primary">Edit</button>
                             <button class="btn btn-primary">Delete</button>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
 
