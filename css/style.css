@@ -1,3 +1,9 @@
 .blockSize {
     width: 20rem;
 }
+
+.Todo-tasks {
+    border: 1px solid red;
+    border-left: 6px solid red;
+    border-radius: 5px;
+} /* Implement this style priorité label */
