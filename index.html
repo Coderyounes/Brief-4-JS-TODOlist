@@ -10,10 +10,26 @@
 <body>
 
     <header>
-        <div class="container mt-4">
-            <div class="d-flex flex-wrap justify-content-around">
+        <!-- Modal -->
+        <div id="popup">
+            <div class="popup-content">
+                <div class="container d-flex flex-column space-y-2">
+                    <input class="form-control" type="text" placeholder="Titre">
+                    <textarea class="form-control" rows="3"></textarea>
+                    <input class="form-control" type="text" placeholder="Priorité">
+                    <input class="form-control" type="text" placeholder="Date">
+                    <div class="d-flex justify-content-around">
+                        <button class="btn btn-primary"><span class="h3">Valid</span></button>
+                        <button id="cancel" class="btn btn-primary"><span class="h3">Cancel</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-around pt-4">
                 <div>
-                    <button class="btn btn-primary" type="submit"><span class="h4">Add Task +</span></button>
+                    <button id="create" class="btn btn-primary" type="submit"><span class="h4">Add Task +</span></button>
                 </div>
                 <div>
                     <button class="btn btn-primary" type="submit"><span class="h4">Add Multiple +</span></button>
@@ -24,8 +40,7 @@
             </div>
         </div>   
     </header>
-
-
+    
     <section>
         <div class="container mt-5">
 
@@ -78,6 +93,8 @@
 
           </div>
     </section>
+
+    <script src="/js/app.js"></script>
 </body>
 </html>
 
