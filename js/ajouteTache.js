@@ -8,7 +8,7 @@ function ajouterUneTache() {
         date: document.getElementById('date').value,
     }
 
-    console.log(tacheDetails.priorite);
+ 
 
     let todoContainer =  document.getElementById('Todo');
     let newdiv = document.createElement('div');
@@ -21,7 +21,19 @@ function ajouterUneTache() {
     editBtn.textContent = "Edit";
     deleteBtn.textContent = "Remove";
 
-    newdiv.classList.add("border", "p-3");
+    if (tacheDetails.priorite == '1') {
+        newdiv.classList.add("p-3", "mt-3", "P1");
+    }
+
+    if (tacheDetails.priorite == '2') {
+        newdiv.classList.add("p-3", "mt-3", "P2");
+    }
+
+    if (tacheDetails.priorite == '3') {
+        newdiv.classList.add("p-3", "mt-3", "P3");
+    }
+
+
     heading.classList.add("h4");
     editBtn.classList.add("btn", "btn-primary");
     deleteBtn.classList.add("btn", "btn-primary");

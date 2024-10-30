@@ -1,12 +1,27 @@
 .blockSize {
     width: 20rem;
+    height: 30rem;
+    border: none;
+    overflow: scroll;
 }
 
-.Todo-tasks {
+.P1 {
     border: 1px solid red;
     border-left: 6px solid red;
     border-radius: 5px;
-} /* Implement this style priorité label */
+}
+
+.P2 {
+    border: 1px solid orange;
+    border-left: 6px solid orange;
+    border-radius: 5px; 
+}
+
+.P3 {
+    border: 1px solid green;
+    border-left: 6px solid green;
+    border-radius: 5px;   
+}
 
 
 #popup {
