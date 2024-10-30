@@ -45,6 +45,8 @@ function ajouterUneTache() {
 
     heading.textContent = tacheDetails.titre;
     editBtn.textContent = "Edit";
+    deleteBtn.id = "remove";
+    deleteBtn.setAttribute('onclick', "removeTache(this)");
     deleteBtn.textContent = "Remove";
 
     if (tacheDetails.priorite == '1') {
