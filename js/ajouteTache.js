@@ -8,7 +8,8 @@ function ajouterUneTache() {
         date: document.getElementById('date').value,
     }
 
-    console.log("Test Now: ", tacheDetails.titre);
+    console.log(tacheDetails.priorite);
+
     let todoContainer =  document.getElementById('Todo');
     let newdiv = document.createElement('div');
     let heading = document.createElement('p');
