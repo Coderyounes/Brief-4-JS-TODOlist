@@ -8,7 +8,25 @@ function ajouterUneTache() {
         date: document.getElementById('date').value,
     }
 
- 
+
+    if (tacheDetails.titre == "" || tacheDetails.titre.length > 100) {
+        const titireError = document.getElementById('titreError');
+        titireError.textContent = "Titre Error !";
+        return;
+    }
+
+    if (tacheDetails.description == "") {
+        const discriptionError = document.getElementById('descriptionError');
+        discriptionError.textContent = "Description Error !";
+        return;
+    }
+
+    if(!['1', '2', '3'].includes(tacheDetails.priorite)) {
+        const prioriteError = document.getElementById('prioritéError');
+        prioriteError.textContent = "definir une priorité";
+        return;
+    }
+
 
     let todoContainer =  document.getElementById('Todo');
     let newdiv = document.createElement('div');

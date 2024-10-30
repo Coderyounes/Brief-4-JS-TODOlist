@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    let titre = document.getElementById('titre');
-    let description = document.getElementById('description');
-
     let modal = document.getElementById('popup');
 
     document.getElementById('create').onclick = function () {
@@ -20,6 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const selects = modal.querySelectorAll('select');
         selects.forEach(select => select.selectedIndex = 0);
+
+        const spans = modal.querySelectorAll('.error-msg');
+        spans.forEach(span => span.textContent = '');
     };
 
     window.onclick = function (e) {
@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const selects = modal.querySelectorAll('select');
             selects.forEach(select => select.selectedIndex = 0);
+
+            const spans = modal.querySelectorAll('.error-msg');
+            spans.forEach(span => span.textContent = '');
 
         }
     }
