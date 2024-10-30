@@ -15,7 +15,7 @@ function ajouterUneTache() {
         return;
     }
 
-    if (tacheDetails.description == "") {
+    if (tacheDetails.description == "" || tacheDetails.description > 3000) {
         const discriptionError = document.getElementById('descriptionError');
         discriptionError.textContent = "Description Error !";
         return;
@@ -24,6 +24,14 @@ function ajouterUneTache() {
     if(!['1', '2', '3'].includes(tacheDetails.priorite)) {
         const prioriteError = document.getElementById('prioritéError');
         prioriteError.textContent = "definir une priorité";
+        return;
+    }
+
+    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+    console.log(tacheDetails.date);
+    if(tacheDetails.date == "" || !dateRegex.test(tacheDetails.date)) {
+        const dateError = document.getElementById('dateError');
+        dateError.textContent = "Date Format Incorrect";
         return;
     }
 
