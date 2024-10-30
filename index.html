@@ -14,12 +14,28 @@
         <div id="popup">
             <div class="popup-content">
                 <div class="container d-flex flex-column space-y-2">
-                    <input class="form-control" id="titre" type="text" placeholder="Titre">
-                    <textarea class="form-control" id="description" placeholder="Description" rows="3"></textarea>
-                    <input class="form-control" id="priorite" type="text" placeholder="Priorité">
-                    <input class="form-control" id="date" type="text" placeholder="Date">
+                    <div>
+                        <input class="form-control" id="titre" type="text" placeholder="Titre">
+                        <span class="text-danger" id="titreError"></span>
+                    </div>
+                    <div>
+                        <textarea class="form-control" id="description" placeholder="Description" rows="3"></textarea>
+                        <span class="text-danger" id="descriptionError"></span>
+                    </div>
+                    <div>
+                        <input class="form-control" id="status" type="text" placeholder="Status">
+                        <span class="text-danger" id="statusError"></span>
+                    </div>
+                    <div>
+                        <input class="form-control" id="priorite" type="text" placeholder="Priorité">
+                        <span class="text-danger" id="prioritéError"></span>
+                    </div>
+                    <div>
+                        <input class="form-control" id="date" type="date" placeholder="Date">
+                        <span class="text-danger" id="dateError"></span>
+                    </div>
                     <div class="d-flex justify-content-around">
-                        <button id="valid" class="btn btn-primary"><span class="h3">Valid</span></button>
+                        <button id="valid" class="btn btn-primary" type="submit"><span class="h3">Valid</span></button>
                         <button id="cancel" class="btn btn-primary"><span class="h3">Cancel</span></button>
                     </div>
                 </div>
