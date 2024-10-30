@@ -11,6 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('cancel').onclick = function () {
         modal.style.display = "none";
+
+        const inputs = modal.querySelectorAll('input');
+        inputs.forEach(input => input.value = '');
+
+        const textarea = modal.querySelector('textarea');
+        textarea.value = '';
+        
+        const selects = modal.querySelectorAll('select');
+        selects.forEach(select => select.selectedIndex = 0);
     };
 
     window.onclick = function (e) {
@@ -22,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const textarea = modal.querySelector('textarea');
             textarea.value = '';
-            
+
             const selects = modal.querySelectorAll('select');
             selects.forEach(select => select.selectedIndex = 0);
 
