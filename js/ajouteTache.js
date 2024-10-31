@@ -1,3 +1,6 @@
+// make sure to add the Description but make it look shorter & hide it 
+// in expand function show the Description in Modal Box
+
 function ajouterUneTache() {
     let modal = document.getElementById('popup');
     //let todoContainer =  document.getElementById('Todo');
@@ -30,7 +33,6 @@ function ajouterUneTache() {
     }
 
     const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-    console.log(tacheDetails.date);
     if(tacheDetails.date == "" || !dateRegex.test(tacheDetails.date)) {
         const dateError = document.getElementById('dateError');
         dateError.textContent = "Date Format Incorrect";
@@ -47,7 +49,7 @@ function ajouterUneTache() {
 
     heading.textContent = tacheDetails.titre;
     expandBtn.textContent = "Expand";
-    //expandBtn.setAttribute('onclick', "expandTache(this)");
+    expandBtn.setAttribute('onclick', "expandTache(this)");
 
     // add Style to deleteBTN
     deleteBtn.setAttribute('onclick', "removeTache(this)");

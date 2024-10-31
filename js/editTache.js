@@ -1,6 +1,8 @@
 function editTache(task) {
-
     let todoContainer =  task.parentElement;
+    if(todoContainer.querySelector('select')) {
+        return;
+    }
     let choice = document.querySelectorAll('#status option');
 
     let newSelect = document.createElement('select');
@@ -22,6 +24,11 @@ function changeColumn(task) {
 
     let clone = task.parentElement.cloneNode(true);
 
+    let selectBar = clone.querySelector('select');
+    if (selectBar) {
+        selectBar.remove();
+    }
+
     switch(task.value) {
         case '1':
             todoContainer.appendChild(clone);
@@ -31,6 +38,7 @@ function changeColumn(task) {
             break;
         case '3':
             doneCotainer.appendChild(clone);
+            break;
     }
 
     tempRemove(task.parentElement);
