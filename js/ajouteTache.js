@@ -42,14 +42,19 @@ function ajouterUneTache() {
     let heading = document.createElement('p');
     let editBtn = document.createElement('button');
     let deleteBtn = document.createElement('button');
+    let expandBtn = document.createElement('button');
 
 
     heading.textContent = tacheDetails.titre;
-    editBtn.textContent = "Edit";
-    editBtn.setAttribute('onclick', "editTache(this)");
-    deleteBtn.id = "remove";
+    expandBtn.textContent = "Expand";
+    //expandBtn.setAttribute('onclick', "expandTache(this)");
+
+    // add Style to deleteBTN
     deleteBtn.setAttribute('onclick', "removeTache(this)");
     deleteBtn.textContent = "Remove";
+    // add Style to EditBTN
+    editBtn.textContent = "Edit";
+    editBtn.setAttribute('onclick', "editTache(this)");
 
     if (tacheDetails.priorite == '1') {
         newdiv.classList.add("tacheBox","p-3", "mt-3", "P1");
@@ -65,12 +70,15 @@ function ajouterUneTache() {
 
 
     heading.classList.add("h4");
-    editBtn.classList.add("btn", "btn-primary");
-    deleteBtn.classList.add("btn", "btn-primary");
+    deleteBtn.classList.add("btn", "btn-danger");
+    editBtn.classList.add("btn", "btn-warning", "mx-2");
+    expandBtn.classList.add('btn', "btn-primary");
+
 
     newdiv.appendChild(heading);
-    newdiv.appendChild(editBtn);
     newdiv.appendChild(deleteBtn);
+    newdiv.appendChild(editBtn);
+    newdiv.appendChild(expandBtn);
 
     
     //todoContainer.appendChild(newdiv);

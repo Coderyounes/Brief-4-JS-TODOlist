@@ -5,5 +5,4 @@ function removeTache(task) {
     } else {
         alert("notask!");
     }
-    
 }
