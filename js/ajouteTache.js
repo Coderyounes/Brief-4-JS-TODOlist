@@ -1,4 +1,6 @@
 function ajouterUneTache() {
+    let modal = document.getElementById('popup');
+    //let todoContainer =  document.getElementById('Todo');
 
     let tacheDetails = {
         titre: document.getElementById('titre').value,
@@ -36,7 +38,6 @@ function ajouterUneTache() {
     }
 
 
-    let todoContainer =  document.getElementById('Todo');
     let newdiv = document.createElement('div');
     let heading = document.createElement('p');
     let editBtn = document.createElement('button');
@@ -45,20 +46,21 @@ function ajouterUneTache() {
 
     heading.textContent = tacheDetails.titre;
     editBtn.textContent = "Edit";
+    editBtn.setAttribute('onclick', "editTache(this)");
     deleteBtn.id = "remove";
     deleteBtn.setAttribute('onclick', "removeTache(this)");
     deleteBtn.textContent = "Remove";
 
     if (tacheDetails.priorite == '1') {
-        newdiv.classList.add("p-3", "mt-3", "P1");
+        newdiv.classList.add("tacheBox","p-3", "mt-3", "P1");
     }
 
     if (tacheDetails.priorite == '2') {
-        newdiv.classList.add("p-3", "mt-3", "P2");
+        newdiv.classList.add("tacheBox", "p-3", "mt-3", "P2");
     }
 
     if (tacheDetails.priorite == '3') {
-        newdiv.classList.add("p-3", "mt-3", "P3");
+        newdiv.classList.add("tacheBox", "p-3", "mt-3", "P3");
     }
 
 
@@ -70,7 +72,30 @@ function ajouterUneTache() {
     newdiv.appendChild(editBtn);
     newdiv.appendChild(deleteBtn);
 
-    todoContainer.appendChild(newdiv);
+    
+    //todoContainer.appendChild(newdiv);
+    tacheStatus(tacheDetails, newdiv);
+
+    modal.style.display = "none";
+}
+
+
+function tacheStatus(tacheDetails, newdiv) {
+    let todoContainer =  document.getElementById('Todo');
+    let doingContainer = document.getElementById('Doing');
+    let doneContainer = document.getElementById('Done');
+
+    if(tacheDetails.status == '1') {
+        todoContainer.appendChild(newdiv);
+    }
+
+    if (tacheDetails.status == '2') {
+        doingContainer.appendChild(newdiv)
+    }
+
+    if(tacheDetails.status == '3') {
+        doneContainer.appendChild(newdiv);
+    }
 }
 
 
