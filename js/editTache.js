@@ -6,7 +6,8 @@ function editTache(task) {
     let choice = document.querySelectorAll('#status option');
 
     let newSelect = document.createElement('select');
-    newSelect.setAttribute('onchange', "changeColumn(this)")
+    newSelect.setAttribute('onchange', "changeColumn(this)");
+    newSelect.classList.add("form-control" ,"form-select", "mt-2");
     choice.forEach((choix, i) => {
         let newOption = document.createElement('option');
         newOption.value = i;
