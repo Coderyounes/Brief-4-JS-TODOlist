@@ -41,7 +41,7 @@ function ajouterUneTache() {
 
 
     let newdiv = document.createElement('div');
-    let heading = document.createElement('a');
+    let heading = document.createElement('h1');
     let date = document.createElement('p');
     let editBtn = document.createElement('button');
     let deleteBtn = document.createElement('button');
@@ -49,7 +49,6 @@ function ajouterUneTache() {
 
 
     heading.textContent = tacheDetails.titre;
-    heading.href = "#";
     heading.setAttribute('onclick', "expandTache(this)");
 
     date.textContent = tacheDetails.date;
