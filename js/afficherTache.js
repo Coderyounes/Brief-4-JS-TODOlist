@@ -1,6 +1,22 @@
 function expandTache(task) {
     let Parent = task.parentElement;
+    let expandModal = document.getElementById('expandModal');
 
+    expandModal.style.display = "block";
+
+
+    document.getElementById('retour').onclick = function () {
+        expandModal.style.display = "none";
+    }
+
+
+    window.onclick = function(e) {
+        if(e.target == expandModal) {
+            expandModal.style.display = "none";
+        }
+    }
+
+    
     
 
 
