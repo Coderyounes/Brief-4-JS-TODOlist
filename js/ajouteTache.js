@@ -32,12 +32,12 @@ function ajouterUneTache() {
         return;
     }
 
-    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+    /*const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
     if(tacheDetails.date == "" || !dateRegex.test(tacheDetails.date)) {
         const dateError = document.getElementById('dateError');
         dateError.textContent = "Date Format Incorrect";
         return;
-    }
+    }*/
 
 
     let newdiv = document.createElement('div');
@@ -71,10 +71,11 @@ function ajouterUneTache() {
     if (tacheDetails.priorite == '3') {
         newdiv.classList.add("tacheBox", "p-3", "mt-3", "P3");
     }
-
+    newdiv.setAttribute('data-titre', tacheDetails.titre);
     newdiv.setAttribute('data-description', tacheDetails.description);
     newdiv.setAttribute('data-status', tacheDetails.status);
     newdiv.setAttribute('data-priorite', tacheDetails.priorite);
+    newdiv.setAttribute('data-date', tacheDetails.date);
 
     heading.classList.add("h4");
     deleteBtn.classList.add("btn", "btn-danger");

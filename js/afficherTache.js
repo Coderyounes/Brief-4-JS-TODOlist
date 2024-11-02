@@ -1,10 +1,12 @@
 function expandTache(task) {
     let parent = task.parentElement;
 
-    document.getElementById('expandModal');
-
     expandModal.style.visibility = "visible";
 
+    spanTitre.textContent = parent.dataset.titre;
+    desc.textContent = parent.dataset.description;
+    prior.textContent = parent.dataset.status;
+    deadline.textContent = parent.dataset.date;
     document.getElementById('retour').onclick = function () {
         expandModal.style.visibility = "hidden";
     }
