@@ -53,9 +53,11 @@ function ajouterUneTache(e) {
 
     // add Style to deleteBTN
     deleteBtn.setAttribute('onclick', "removeTache(this)");
+    deleteBtn.id = "remove";
     deleteBtn.textContent = "Remove";
     // add Style to EditBTN
     editBtn.textContent = "Edit";
+    editBtn.id = "edit";
     editBtn.setAttribute('onclick', "editTache(this)");
 
     if (tacheDetails.priorite == '1') {
@@ -99,8 +101,8 @@ function ajouterUneTache(e) {
     newdiv.appendChild(editBtn);
 
     
-    //todoContainer.appendChild(newdiv);
     tacheStatus(tacheDetails, newdiv);
+    updateCounters();
 
     modal.style.display = "none";
 }
@@ -122,6 +124,24 @@ function tacheStatus(tacheDetails, newdiv) {
     if(tacheDetails.status == '3') {
         doneContainer.appendChild(newdiv);
     }
+}
+
+function updateCounters() {
+    let todoBlock = document.getElementById('Todo');
+    let doingBlock = document.getElementById('Doing');
+    let doneBlock = document.getElementById('Done');
+
+    let counterTodo = todoBlock.querySelectorAll('div');
+    let counterDoing = doingBlock.querySelectorAll('div');
+    let counterDone = doneBlock.querySelectorAll('div');
+
+    let todoCount = document.getElementById('todoCount');
+    let doingCount = document.getElementById('doingCount');
+    let doneCount = document.getElementById('doneCount');
+
+    todoCount.textContent = counterTodo.length;
+    doingCount.textContent = counterDoing.length;
+    doneCount.textContent = counterDone.length;
 }
 
 

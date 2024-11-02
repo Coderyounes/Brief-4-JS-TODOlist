@@ -19,11 +19,4 @@ function expandTache(task) {
     }
 }
 
-function tracking() {
-    // const myDiv = document.querySelector('#Todo');
-    // myDiv.querySelectorAll('div').length;
-    // queryall the element inside 3 colums 
-    // on any Action or mouvement re-calculation should be performed
-}
-
 // function trigger, when the user add , edit or remove a task
