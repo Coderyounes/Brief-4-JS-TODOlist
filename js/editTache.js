@@ -32,12 +32,15 @@ function changeColumn(task) {
 
     switch(task.value) {
         case '1':
+            clone.dataset.status = '1';
             todoContainer.appendChild(clone);
             break;
         case '2':
+            clone.dataset.status = '2';
             doingContainer.appendChild(clone);
             break;
         case '3':
+            clone.dataset.status = '3';
             doneCotainer.appendChild(clone);
             break;
     }

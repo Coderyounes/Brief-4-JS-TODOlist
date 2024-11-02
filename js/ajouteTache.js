@@ -6,13 +6,12 @@ function ajouterUneTache() {
     //let todoContainer =  document.getElementById('Todo');
 
     let tacheDetails = {
-        titre: document.getElementById('titre').value,
+        titre: titre.value,
         description: document.getElementById('description').value,
         status: document.getElementById('status').value,
         priorite: document.getElementById('priorite').value,
         date: document.getElementById('date').value,
     }
-
 
     if (tacheDetails.titre == "" || tacheDetails.titre.length > 100) {
         const titireError = document.getElementById('titreError');
@@ -45,7 +44,6 @@ function ajouterUneTache() {
     let date = document.createElement('p');
     let editBtn = document.createElement('button');
     let deleteBtn = document.createElement('button');
-    let expandBtn = document.createElement('button');
 
 
     heading.textContent = tacheDetails.titre;
@@ -74,9 +72,22 @@ function ajouterUneTache() {
     newdiv.setAttribute('data-titre', tacheDetails.titre);
     newdiv.setAttribute('data-description', tacheDetails.description);
     newdiv.setAttribute('data-status', tacheDetails.status);
-    newdiv.setAttribute('data-priorite', tacheDetails.priorite);
-    newdiv.setAttribute('data-date', tacheDetails.date);
 
+    prior.classList.add("displayBadge", "badge",  "badge-pill", "badge-dark");
+
+    switch(tacheDetails.priorite) {
+        case '1':
+            newdiv.setAttribute('data-priorite', 'Urgent');
+            break;
+        case '2':
+            newdiv.setAttribute('data-priorite', 'Important');
+            break;
+        case '3':
+            newdiv.setAttribute('data-priorite', 'Low');
+            break;
+    }
+    newdiv.setAttribute('data-date', tacheDetails.date);
+    
     heading.classList.add("h4");
     deleteBtn.classList.add("btn", "btn-danger");
     editBtn.classList.add("btn", "btn-warning", "mx-4");
