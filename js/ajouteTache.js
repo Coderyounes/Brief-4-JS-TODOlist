@@ -51,11 +51,10 @@ function ajouterUneTache(e) {
 
     date.textContent = tacheDetails.date;
 
-    // add Style to deleteBTN
     deleteBtn.setAttribute('onclick', "removeTache(this)");
     deleteBtn.id = "remove";
     deleteBtn.textContent = "Remove";
-    // add Style to EditBTN
+
     editBtn.textContent = "Edit";
     editBtn.id = "edit";
     editBtn.setAttribute('onclick', "editTache(this)");

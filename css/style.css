@@ -2,9 +2,9 @@
 
 .blockSize {
     width: 20rem;
-    height: 30rem;
+    max-height: 30rem;
     border: none;
-    /*overflow: scroll;*/
+    overflow: scroll;
 }
 
 
