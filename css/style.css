@@ -66,6 +66,8 @@
 
 #desc {
     font-family: Libre Franklin;
+    width: 300px;
+    margin: auto;
 }
 
 #spanTitre {
@@ -75,6 +77,7 @@
 #expandModal {
     position: fixed;
     visibility: hidden;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 100%;

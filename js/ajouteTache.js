@@ -32,12 +32,12 @@ function ajouterUneTache() {
         return;
     }
 
-    /*const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
     if(tacheDetails.date == "" || !dateRegex.test(tacheDetails.date)) {
         const dateError = document.getElementById('dateError');
         dateError.textContent = "Date Format Incorrect";
         return;
-    }*/
+    }
 
 
     let newdiv = document.createElement('div');
