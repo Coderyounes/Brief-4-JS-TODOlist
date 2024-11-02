@@ -1,10 +1,10 @@
 // make sure to add the Description but make it look shorter & hide it 
 // in expand function show the Description in Modal Box
 
-function ajouterUneTache() {
+function ajouterUneTache(e) {
     let modal = document.getElementById('popup');
     //let todoContainer =  document.getElementById('Todo');
-
+    e.preventDefault();
     let tacheDetails = {
         titre: titre.value,
         description: document.getElementById('description').value,

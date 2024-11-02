@@ -1,7 +1,7 @@
 function removeTache(task) {
-
-    if (task) {
-        task.parentElement.remove();
+    let element = task.parentElement;
+    if (element) {
+        element.remove();
     } else {
         alert("notask!");
     }
