@@ -104,7 +104,10 @@ function ajouterUneTache(e) {
     tacheStatus(tacheDetails, newdiv);
     updateCounters();
 
+    let span = document.getElementById('alert-ajoute');
     modal.style.display = "none";
+    span.style.display = "block";
+    ajouteAnimation();
 }
 
 
@@ -124,6 +127,23 @@ function tacheStatus(tacheDetails, newdiv) {
     if(tacheDetails.status == '3') {
         doneContainer.appendChild(newdiv);
     }
+}
+
+function ajouteAnimation() {
+    let opacity = 1;
+    let span = document.getElementById('alert-ajoute');
+
+    function decrease() {
+        opacity -= 0.01;
+        if(opacity <= 0) {
+            span.style.opacity = 0;
+            span.style.display = "none";
+        } else {
+            span.style.opacity = opacity;
+            requestAnimationFrame(decrease);
+        }
+    }
+    decrease();
 }
 
 function updateCounters() {

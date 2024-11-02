@@ -1,11 +1,30 @@
 function removeTache(task) {
     let element = task.parentElement;
     if (element) {
-        element.remove();
-        updateCounters();
+        document.getElementById('alert-remove').style.display = "block";
+        deleteAnimation(element);
     } else {
         alert("notask!");
     }
+}
+
+function deleteAnimation(task) {
+    let opacity = 1;
+    let span = document.getElementById('alert-remove');
+    function decrease() {
+        opacity -= 0.01;
+        if(opacity <= 0) {
+            task.style.opacity = 0;
+            span.style.display = "none";
+            task.remove();
+            updateCounters();
+        } else {
+            task.style.opacity = opacity;
+            span.style.opacity = opacity;
+            requestAnimationFrame(decrease);
+        }
+    }
+    decrease();
 }
 
 
