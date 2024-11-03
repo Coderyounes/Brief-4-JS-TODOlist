@@ -111,6 +111,7 @@ function ajouterUneTache(e) {
     modal.style.display = "none";
     span.style.display = "block";
     ajouteAnimation();
+    clear();
 }
 
 
@@ -165,6 +166,23 @@ function updateCounters() {
     todoCount.textContent = counterTodo.length;
     doingCount.textContent = counterDoing.length;
     doneCount.textContent = counterDone.length;
+}
+
+function clear() {
+        let modal = document.getElementById('popup');
+        modal.style.display = "none";
+
+        const inputs = modal.querySelectorAll('input');
+        inputs.forEach(input => input.value = '');
+
+        const textarea = modal.querySelector('textarea');
+        textarea.value = '';
+        
+        const selects = modal.querySelectorAll('select');
+        selects.forEach(select => select.selectedIndex = 0);
+
+        const spans = modal.querySelectorAll('.error-msg');
+        spans.forEach(span => span.textContent = '');
 }
 
 
