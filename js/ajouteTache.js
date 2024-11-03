@@ -80,17 +80,15 @@ function ajouterUneTache(e) {
     newdiv.setAttribute('data-description', tacheDetails.description);
     newdiv.setAttribute('data-status', tacheDetails.status);
 
-    prior.classList.add("displayBadge", "badge",  "badge-pill", "badge-dark");
-
     switch(tacheDetails.priorite) {
         case '1':
-            newdiv.setAttribute('data-priorite', 'Urgent');
+            newdiv.setAttribute('data-priorite', 'P0');
             break;
         case '2':
-            newdiv.setAttribute('data-priorite', 'Important');
+            newdiv.setAttribute('data-priorite', 'P1');
             break;
         case '3':
-            newdiv.setAttribute('data-priorite', 'Low');
+            newdiv.setAttribute('data-priorite', 'P2');
             break;
     }
     newdiv.setAttribute('data-date', tacheDetails.date);

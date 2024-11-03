@@ -4,7 +4,6 @@
     width: 20rem;
     max-height: 30rem;
     border: none;
-    overflow: auto;
 }
 
 
@@ -26,6 +25,9 @@
     border-radius: 5px;   
 }
 
+#Todo {
+    overflow: auto;
+}
 
 #popup {
     position: fixed;
