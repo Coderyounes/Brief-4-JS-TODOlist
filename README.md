@@ -1,5 +1,6 @@
 # Brief-4-JS-TODOlist
 
+![TodoList](./image/TODO.png)
 
 ## Description
 Une application TODO list simple utilisant JavaScript natif. Permet aux utilisateurs d'ajouter, de supprimer et de marquer des tâches comme complètes.
@@ -14,7 +15,7 @@ Une application TODO list simple utilisant JavaScript natif. Permet aux utilisat
  * Validation des formulaires : Garantir la qualité des données saisies.
  * Dynamisme : Utilisation de JavaScript pour des animations d'ajout et de suppression.
  * Déploiement : Projet accessible en ligne via GitHub Pages ou Vercel.
- 
+
 ## Les Outils Utilisées
 * HTML
 * CSS
