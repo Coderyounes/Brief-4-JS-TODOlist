@@ -19,7 +19,7 @@ function ajouterUneTache(e) {
         return;
     }
 
-    if(tacheDetails.status == 0 || ![1, 2, 3].includes(tacheDetails.status)){
+    if(tacheDetails.status == 0 || !['1', '2', '3'].includes(tacheDetails.status)){
         let statusError = document.getElementById('statusError');
         statusError.textContent = "Choisir Une Status";
         return;
