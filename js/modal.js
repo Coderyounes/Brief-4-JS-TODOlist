@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         spans.forEach(span => span.textContent = '');
     };
 
-    document.getElementById('valid').onclick = function () {
+    /*document.getElementById('valid').onclick = function () {
         modal.style.display = "none";
 
         const inputs = modal.querySelectorAll('input');
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const spans = modal.querySelectorAll('.error-msg');
         spans.forEach(span => span.textContent = '');
-    }
+    }*/
 
     window.onclick = function (e) {
         if (e.target == modal) {

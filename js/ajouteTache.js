@@ -14,26 +14,32 @@ function ajouterUneTache(e) {
     }
 
     if (tacheDetails.titre == "" || tacheDetails.titre.length > 100) {
-        const titireError = document.getElementById('titreError');
+        let titireError = document.getElementById('titreError');
         titireError.textContent = "Titre Error !";
         return;
     }
 
+    if(tacheDetails.status == 0 || ![1, 2, 3].includes(tacheDetails.status)){
+        let statusError = document.getElementById('statusError');
+        statusError.textContent = "Choisir Une Status";
+        return;
+    }
+
     if (tacheDetails.description == "" || tacheDetails.description > 3000) {
-        const discriptionError = document.getElementById('descriptionError');
+        let discriptionError = document.getElementById('descriptionError');
         discriptionError.textContent = "Description Error !";
         return;
     }
 
     if(!['1', '2', '3'].includes(tacheDetails.priorite)) {
-        const prioriteError = document.getElementById('prioritéError');
+        let prioriteError = document.getElementById('prioritéError');
         prioriteError.textContent = "definir une priorité";
         return;
     }
 
     const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
     if(tacheDetails.date == "" || !dateRegex.test(tacheDetails.date)) {
-        const dateError = document.getElementById('dateError');
+        let dateError = document.getElementById('dateError');
         dateError.textContent = "Date Format Incorrect";
         return;
     }
