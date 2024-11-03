@@ -10,7 +10,6 @@
 <body>
 
     <header>
-
         <div id="expandModal" class="container-fluid">
             <div class="d-flex justify-content-center align-items-center">
                 <div class="d-flex justify-content-center align-items-center">
@@ -51,6 +50,7 @@
                         <span class="text-danger error-msg" id="descriptionError"></span>
                     </div>
                     <div>
+                        <label for="status">Status</label>
                         <select class="form-control form-select" id="status">
                             <option value="0" selected>Select the Status</option>
                             <option value="1">ToDo</option>
@@ -60,6 +60,7 @@
                         <span class="text-danger error-msg" id="statusError"></span>
                     </div>
                     <div>
+                        <label for="priorite">priorite</label>
                         <select class="form-control form-select" id="priorite">
                             <option value="0" selected>Select your Priorité</option>
                             <option value="1">P0</option>
@@ -89,11 +90,13 @@
                 <div>
                     <button class="btn btn-primary" type="submit"><span class="h4">Add Multiple +</span></button>
                 </div>
-                <div class="mt-4 mt-md-0">
-                    <input class="form-control form-control-lg h-100 w-100" type="text" placeholder="Search...">
+                <div class="mt-4 mt-md-0 d-flex">
+                    <label class="mr-2 mt-2" for="searchBar">Search: </label>
+                    <input id="searchBar" class="form-control form-control-lg h-100 w-100" type="text" placeholder="Search...">
                 </div>
             </div>
         </div>
+        <h1 class="text-center mt-3"> Task Flow </h1>
     </header>
     
     <section>
